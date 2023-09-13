@@ -6,3 +6,45 @@
   --white: hsl(0,0%,100%); 
 }
 
+.header-xl{
+  font-size: 88px;
+  letter-spacing: -2px;
+  line-height: 88px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.header-lg{
+  font-size: 48px;
+  letter-spacing: -1.5px;
+  line-height: 56px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+}
+
+.heading-med{
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+}
+
+.body-lg{
+  font-family: 'Space Grotesk', 'sans-serif';
+  font-weight: medium;
+  font-size: 18px;
+  line-height: 28px;
+
+}
+
+#root{
+  background-color: var(--black);
+}
+
+.body{
+  height: 100vh;
+  background-color: var(--black);
+  padding-left: 200px;
+  padding-right: 200px;
+}
