@@ -30,7 +30,7 @@ const Header = () => {
             <img src={github} alt="github logo" />
           </a>
           <a
-            href="www.linkedin.com/in/tyler-aycock-2b2191a8"
+            href="https://www.linkedin.com/in/tyler-aycock-2b2191a8/"
             target="blank"
             className="link"
           >
@@ -47,11 +47,11 @@ const Header = () => {
         </div>
         <div className="blurb">
           <h3 className="body-lg">
-            Based in the San Diegp, I'm a front-end developer passionate about
+            Based in the San Diego, I'm a front-end developer passionate about
             building accessible web apps that users love.
           </h3>
         </div>
-        <a className="btn body-lg">Contact Me</a>
+        <a  href="#contact" className="btn body-lg">CONTACT ME</a>
       </div>
     </div>
   );
