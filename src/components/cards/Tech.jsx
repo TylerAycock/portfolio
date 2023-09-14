@@ -1,8 +1,12 @@
-import "./Tech.css"
+import "./Tech.css";
 
 const Tech = ({ tech }) => {
-  let specifics = tech.map((item) => {
-    return <p className="body-lg item">{item}</p>;
+  let specifics = tech.map((item, index) => {
+    return (
+      <p className="body-lg item" key={index}>
+        {item}
+      </p>
+    );
   });
   return <div className="tech-container">{specifics}</div>;
 };

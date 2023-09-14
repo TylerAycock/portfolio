@@ -12,7 +12,7 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    defualtValues: {
+    defaultValues: {
       name: "",
       email: "",
       message: "",
@@ -21,6 +21,10 @@ const Contact = () => {
 
   const submitHandler = (data) => {
     console.log(data);
+    alert(
+      `Thanks ${data.name} I'll reach out as soon as possible, have a great day!`
+    );
+    reset();
   };
   return (
     <div className="contact-container">
@@ -38,35 +42,42 @@ const Contact = () => {
         className="form"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          id="name"
-          {...register("name", {
-            required: "This field is required",
-          })}
-        />
-        <span className="error-field">{errors.name?.message}</span>
-        <input
-          type="text"
-          placeholder="Email"
-          {...register("email", {
-            required: "This field is required",
-            pattern: {
-              pattern: /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,})$/,
-              message: "Must be a valied email",
-            },
-          })}
-        />
-        <span className="error-field">{errors.email?.message}</span>
-        <input
-          type="textbox"
-          rows="10"
-          cols="50"
-          placeholder="message"
-          {...register("message")}
-        />
+        <div className={errors.name ? "ind-input error" : "ind-input"}>
+          <input
+            className="input"
+            type="text"
+            placeholder="Name"
+            {...register("name", {
+              required: true,
+            })}
+          />
+          {errors.name && <span className="error-field">This is required</span>}
+        </div>
+        <div className={errors.email ? "ind-input error" : "ind-input"}>
+          <input
+            className="input"
+            type="text"
+            placeholder="Email"
+            {...register("email", {
+              required: true,
+              pattern: /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/,
+            })}
+          />
+          {errors.email && errors.email.type === "required" && (
+            <span className="error-field">This is required</span>
+          )}
+          {errors.email && errors.email.type === "pattern" && (
+            <span className="error-field">Invalid email</span>
+          )}
+        </div>
+        <div className={errors.message ? "ind-input error" : "ind-input"}>
+          <input
+            className="input"
+            type="textbox"
+            placeholder="Message"
+            {...register("message")}
+          />
+        </div>
         <button type="submit" className="submit">
           SEND MESSAGE
         </button>
