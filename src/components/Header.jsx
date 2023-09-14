@@ -1,9 +1,8 @@
-import frntendmtr from "../assets/images/icon-frontend-mentor.svg";
-import github from "../assets/images/icon-github.svg";
-import linkedin from "../assets/images/icon-linkedin.svg";
-import profile from "../assets/images/image-profile-desktop.webp";
-import circle from "../assets/images/pattern-circle.svg";
-import rings from "../assets/images/pattern-rings.svg";
+import github from "../../public/assets/images/icon-github.svg";
+import linkedin from "../../public/assets/images/icon-linkedin.svg";
+import profile from "../../public/assets/images/image-profile-desktop.webp";
+import circle from "../../public/assets/images/pattern-circle.svg";
+import rings from "../../public/assets/images/pattern-rings.svg";
 
 import "./Header.css";
 
@@ -23,13 +22,6 @@ const Header = () => {
       <div className="links-container">
         <h1 className="header-md">Tyler Aycock</h1>
         <div className="links">
-          <a
-            href="https://www.frontendmentor.io/profile/TylerAycock"
-            target="blank"
-            className="link"
-          >
-            <img src={frntendmtr} alt="frontend mentor logo" />
-          </a>
           <a
             href="https://github.com/TylerAycock"
             target="blank"

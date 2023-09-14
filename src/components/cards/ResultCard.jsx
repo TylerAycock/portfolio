@@ -42,7 +42,7 @@ const ResultCard = () => {
           <div key={index} className="card">
             <a href={proj.link} target="blank">
               <img
-                src={`./src/assets/images/${proj.img}`}
+                src={`./assets/images/${proj.img}`}
                 alt={proj.title + " " + "image"}
                 className="img"
               />

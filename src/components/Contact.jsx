@@ -1,8 +1,7 @@
 import "./Contact.css";
-import rings from "../assets/images/pattern-rings.svg";
-import frntendmtr from "../assets/images/icon-frontend-mentor.svg";
-import github from "../assets/images/icon-github.svg";
-import linkedin from "../assets/images/icon-linkedin.svg";
+import rings from "../../public/assets/images/pattern-rings.svg";
+import github from "../../public/assets/images/icon-github.svg";
+import linkedin from "../../public/assets/images/icon-linkedin.svg";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
@@ -85,13 +84,6 @@ const Contact = () => {
       <div className="footer-section">
         <h1 className="header-md">Tyler Aycock</h1>
         <div className="footer-links">
-          <a
-            href="https://www.frontendmentor.io/profile/TylerAycock"
-            target="blank"
-            className="link"
-          >
-            <img src={frntendmtr} alt="frontend mentor logo" />
-          </a>
           <a
             href="https://github.com/TylerAycock"
             target="blank"
