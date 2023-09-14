@@ -8,6 +8,14 @@ import rings from "../assets/images/pattern-rings.svg";
 import "./Header.css";
 
 const Header = () => {
+  const clickHandler = () => {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="header" style={{ backgroundImage: `url(${profile})` }}>
       <img src={rings} alt="rings image" className="rings" />
@@ -51,7 +59,9 @@ const Header = () => {
             building accessible web apps that users love.
           </h3>
         </div>
-        <a  href="#contact" className="btn body-lg">CONTACT ME</a>
+        <a className="btn body-lg" onClick={() => clickHandler()}>
+          CONTACT ME
+        </a>
       </div>
     </div>
   );
