@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <>
+    <div className="website">
       <div className="body">
         <Header />
         <Skills />
@@ -15,7 +15,7 @@ function App() {
       <div className="footer">
         <Contact />
       </div>
-    </>
+    </div>
   );
 }
 

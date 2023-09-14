@@ -1,6 +1,6 @@
 .contact-container{
     position: relative;
-    background-color: var(--dark-grey);
+    /* background-color: var(--dark-grey); */
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    border: 1px solid pink;
     width: 40%;
     height: 70%;
 }
@@ -34,7 +33,6 @@
 }
 
 .form{
-    border: 1px solid pink;
     height: 70%;
     width: 40%;
     display: flex;
@@ -44,9 +42,19 @@
 }
 
 .form input{
+    color: var(--white);
     background-color: var(--dark-grey);
     padding-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--white);
+}
 
+.form input:active,
+.form input:focus{
+    color: var(--white);
+    border-bottom: 1px solid var(--green);
 }
 
 .submit{
@@ -61,6 +69,24 @@
 
 .submit:hover{
     color: var(--green);
+}
+
+.footer-section{
+    height: 25%;
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-evenly;
 }
 
 
